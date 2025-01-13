@@ -376,7 +376,7 @@ async function processRegistration(accountIndex, totalAccounts, invite, password
     while (!success && attempt < maxRetries) {
         attempt++;
         console.log(chalk.magenta(`\n[Account ${accountIndex + 1}/${totalAccounts}]`));
-        console.log(chalk.yellow('----------------------------------------'));
+        console.log(chalk.yellow('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
 
         try {
             if (useProxy) {
@@ -475,9 +475,9 @@ async function processMultiMode(refCodes, password, accountsPerCode) {
     
     for (let i = 0; i < refCodes.length; i++) {
         const invite = refCodes[i];
-        console.log(chalk.yellow(`\n===============================================`));
+        console.log(chalk.yellow(`\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`));
         console.log(chalk.yellow(`Processing Referral Code ${i + 1}/${refCodes.length}: ${invite}`));
-        console.log(chalk.yellow(`===============================================\n`));
+        console.log(chalk.yellow(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`));
 
         let successfulAccounts = 0;
         let failedAccounts = 0;
@@ -503,11 +503,11 @@ async function processMultiMode(refCodes, password, accountsPerCode) {
 
 (async () => {
     console.clear();
-    console.log(chalk.yellow('==============================================='));
-    console.log(chalk.yellow('               SosoValue Autoref               '));
-    console.log(chalk.yellow('                 By mamangzed                  '));
-    console.log(chalk.yellow('             Revamped By IM-Hanzou            '));
-    console.log(chalk.yellow('===============================================\n'));
+    console.log(chalk.green('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
+    console.log(chalk.green('               SosoValue Autoref               '));
+    console.log(chalk.green('                 By dark life                  '));
+    console.log(chalk.green('             join @scripthub00 for scripts     '));
+    console.log(chalk.green('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'));
 
     const ipChoice = readlineSync.question(chalk.cyan('Using Proxy? (y/n): ')).toLowerCase();
     useProxy = ipChoice === 'y';
@@ -538,10 +538,10 @@ async function processMultiMode(refCodes, password, accountsPerCode) {
         return;
     }
 
-    console.log(chalk.green('\n==============================================='));
+    console.log(chalk.green('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
     console.log(chalk.green(`[+] Registration process completed!`));
     console.log(chalk.cyan(`[*] Successfully created: ${results.totalSuccessful || results.successfulAccounts} accounts`));
     console.log(chalk.red(`[*] Failed to create: ${results.totalFailed || results.failedAccounts} accounts`));
     console.log(chalk.cyan('[*] Check results.txt for account details'));
-    console.log(chalk.green('===============================================\n'));
+    console.log(chalk.green('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'));
 })();
